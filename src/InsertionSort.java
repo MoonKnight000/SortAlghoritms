@@ -12,8 +12,8 @@ public class InsertionSort {
                 arr[j + 1] = com;
             }
         }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int j : arr) {
+            System.out.print(j + " ");
         }
     }
 }

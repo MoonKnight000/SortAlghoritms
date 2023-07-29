@@ -1,19 +1,20 @@
 public class MargeSort {
+     static int[] arr = {89, 3, 9, 4, 6, 6, 32,99};
+
     public static void main(String[] args) {
-        int[] arr = {89, 3, 9, 4, 6, 6, 32,99};
         int k = 1;
         while (k < arr.length) {
             for (int i = 0; i < arr.length; i += k * 2) {
-                arr = sortLittleArrays(arr, i, Math.min(i + k * 2, arr.length));
+               sortLittleArrays( i, Math.min(i + k * 2, arr.length));
             }
             k++;
         }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int j : arr) {
+            System.out.print(j + " ");
         }
     }
 
-    public static int[] sortLittleArrays(int[] arr, int i, int j) {
+    public static void sortLittleArrays(int i, int j) {
         for (int k = i; k < j; k++) {
             for (int l = k + 1; l < j; l++) {
                 if (arr[k] < arr[l]) {
@@ -23,6 +24,5 @@ public class MargeSort {
                 }
             }
         }
-        return arr;
     }
 }
